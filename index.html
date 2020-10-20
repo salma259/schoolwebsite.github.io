@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+
+
+    <style>
+      *{
+        font-family: 'Montserrat', sans-serif;
+        
+      }
+
+     
+        .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+	
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+hr{
+  border-width: 4px;
+  width:95px;
+}
+.btn{
+  border-radius:25px;
+}
+.img-fluid{
+  border-radius:55px;
+}
+.cls{
+  height:250px;
+}
+.cont {
+  position: relative;
+  width:100%;
+  
+}
+
+.image {
+
+ 
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(30, 187, 82);
+  background: rgba(30, 187, 82, 0.8); /* Black see-through */
+  color: #f1f1f1; 
+  width:100%;
+  height:100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  
+  font-size: 15px;
+  padding: 5px;
+  r;
+}
+
+.cont:hover .overlay {
+  opacity: 1;
+}
+
+.card:hover .image {
+  opacity: 0.5;
+}
+
+.border{
+  width:100%;
+  height:100%;
+  border-style:solid;
+  border-width:medium;
+  border-radius:18px;
+}
+
+.p1
+{
+  
+  color:white;
+  height:20%;
+  font-size:18px;
+  border-radius:18px 18px 0 0;
+  font-weight:20px;
+
+}
+
+@media only screen and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color:green;  }
+	.navbar .nav-item:hover .dropdown-menu{ 
+    width:180px;
+    padding:0px;
+    margin:0px;
+    display: block;
+    border-radius:8px;
+    border-top:solid 2px green; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+  .dropdown-menu > a:hover { 
+    background-color:green;
+    color:white;
+    border-radius:3px;
+    margin:0px;
+    
+    }
+}	
+@media only screen and (max-width: 768px) {
+	.navbar .nav-item .dropdown-menu .navbar-nav { display:none; }
+	.navbar .nav-item:hover .nav-link{ color:green;  }
+	.navbar .nav-item:hover .dropdown-menu{ 
+    width:180px;
+    padding:0px;
+    margin:0px;
+    display:block;
+    border-radius:8px;
+    border-top:solid 2px green; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+  .dropdown-menu > a:hover { 
+    background-color:green;
+    color:white;
+    border-radius:3px;
+    margin:0px;
+    
+    
+    }
+    .collapse
+    { 
+   
+    
+    }
+}	
+.dropdown-item{
+    padding:8px;
+   
+    
+  }
+nav .navbar .nav-item .nav-link{
+
+  
+}
+.ifg{
+  
+}
+
+
+       </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-primary sticky-top ">
+        <a class="navbar-brand " href="#"><img src="school-logo.png" alt="LOGO" height="50" width="210" style="padding:0px"></a>
+        <button class="bg-light navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-2 pr-5 ">
+            <li class="nav-item active p-2 ">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown p-2">
+              <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" >
+                About Us
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="act dropdown-item" href="principals.html">Principal's desk</a>
+                <a class="act dropdown-item" href="#abt">overview</a>
+               
+                <a class="miss dropdown-item" href="#mvs">Mission&amp;Vision</a>
+                <a class="aff dropdown-item" href="#aff">Affilation</a>
+
+              
+            </li>
+            <li class="nav-item dropdown p-2">
+              <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" >
+                Academics
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="roll dropdown-item" href="roll.html">Roll of Honour</a>
+        
+              </div>
+            </li>
+            <li class="nav-item dropdown p-2">
+              <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" >
+                Life at Christ Church
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="evt dropdown-item" href="#">Events</a>
+                <a class="ext dropdown-item" href="#">Extra-Curricular</a>
+          
+                <a class="Inf dropdown-item" href="infra.html">Infrastructure</a>
+             
+            </li>
+            <li class="nav-item dropdown p-2">
+              <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" >
+                Faculty
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="pre dropdown-item" href="#">Pre-Primary</a>
+                <a class="pri dropdown-item" href="primary.html">Primary</a>
+                
+                <a class="sec dropdown-item" href="#">Secondary</a>
+              
+            </li>
+
+            <li class="nav-item dropdown p-2">
+              <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" >
+                Admission
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="reg dropdown-item" href="http://localhost/php/reg.php">Register</a>
+                <a class="reg dropdown-item" href="loginform.html">Login</a>
+                <a class="prc dropdown-item" href="#">Process</a>
+                
+                
+              
+            </li>
+            
+          
+      </nav>
+
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="award.jpg" alt="Los Angeles">
+          </div>
+          <div class="carousel-item">
+            <img src="award1.jpg" alt="Chicago">
+          </div>
+          <div class="carousel-item">
+            <img src="award2.jpg" alt="New York">
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        
+      </div>
+            
+            
+        </ul>
+    </nav>
+    <a id="abt">
+    <section id="about us"> 
+        <div class="aboutus container-fluid">
+            <h1 class="text-center text-capitalize pt-5 text-success">About us</h1>
+            <hr class=" text-dark bg-success">
+            <br>
+            <div class="container-fluid">
+            <div class="row mx-2 mt-2">
+              <div class="col-lg-6 col-md-6 col-xl-6 col-12">
+                <p class=" ">
+                  We trace our roots to the present Cathedral of St. Thomas at Fort, where in 1718, Rev. Richard Cobbe, Chaplain to the East India Company’s Factory at Bombay, founded not far from the Cathedral, in 1718, a small free school, where twelve poor boys were housed, clothed, fed and educated by just one master.
+
+This Charity school, was the grain of mustard seed from which Christ Church School, Byculla and Barnes School & Junior College, Devlali have sprung into mighty trees.
+
+
+                </p> 
+
+                <p class=" pt-5  mb-3">
+                  This Charity school, was the grain of mustard seed from which Christ Church School, Byculla and Barnes School & Junior College, Devlali have sprung into mighty trees.
+                </p>
+                <button class="btn btn-effect bg-success text-light  mb-5">Read more <i class='fas fa-angle-double-right'></i></button>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-12  ">
+                <img src="school.jpg" class="img-fluid ">  
+
+              </div>
+             
+            </div>
+          </div>
+          </div>
+
+    </section>
+    <a id="mvs">
+    <section id="mission&vision">
+      <div class="container-fluid">
+        <h1 class="text-center text-capitalize pt-5 text-success">Mission & Vision</h1>
+        <hr class=" text-dark bg-success">
+        <div class="row mb-5 mx-2">
+          <div class="col-lg-6 col-md-6 col-12" style="border-right:1px solid green;">
+            <img src="mission.png" class="mx-auto d-block">
+            <p class="pt-5  px-2">“To empower, To educate,
+              To enlighten individuals, so they make a society,
+              based on values, ethics and justice".</p>
+          </div>
+         
+          <div class="col-lg-6 col-md-6 col-12">
+            <img src="vision.png" class="mx-auto d-block">
+            <p class="pt-5 px-2">"To develop their full potential in the academic, cultural, social & 
+              humanitarian and personal fields within the ambience of a harmonious teaching-learning experience."</p>
+          </div>
+        </div>
+        </div>
+    </section>
+    </a>
+
+<section id="why christ church">
+  <div class="container-fluid bg-light ">
+    <h1 class="text-center text-capitalize pt-5 text-success">Why christ church</h1>
+    <hr class=" text-dark bg-success">
+    <div class="row mt-5  mb-5 mx-2 ">
+      <div class="col-lg-4 col-md-4 col-12 mb-5 ">
+        <div class="card border-0" style="">
+          <div class="card-body">
+            
+            <h4 class="card-title "><i class='fas fa-award pr-1 text-success' style='font-size:36px'></i>Award Wining School</h4>
+            <p class="card-text ">Consistently awarded as one of the Top Schools in Mumbai. 
+              Ranked 11th in Maharashtra, 10th in Mumbai by Education Today amongst top 20 International Schools.</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card border-0" style="">
+          <div class="card-body">
+            <h4 class="card-title">Legacy</h4>
+            <p class="card-text ">Associate with an educational institution that has a 200 year of legacy.</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card border-0" style="">
+          <div class="card-body">
+            <h4 class="card-title"><i class='fas fa-graduation-cap pr-1 text-success' style='font-size:36px'></i>We Care, We Dare, We Educate.</h4>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</a>
+
+<section>
+
+  <div class="aboutus container-fluid bg-light">
+    <h1 class="text-center text-capitalize pt-5 text-success">Facilities</h1>
+    <hr class=" text-dark bg-success">
+    <br>
+
+    <div class="container-fluid bg-success " >
+  <h4 class="text-center text-capitalize pt-2 text-light h-50" >Sports</h4>
+
+<div class="row">
+<div class="col-12 col-lg-3 col-md-3"  style="padding:7px;">
+  
+  <div class="card cont">
+    <div class="card-body " style="padding:0px;">
+        <img src="football.jpg"  class="cls img-fluid " height="250" width="613" style="border-radius:5px;" class="image">
+        <div class="overlay">
+          <h4 class="text-left">Football</h4>
+          <p> Subrato Mukherjee Cup inter-school football tournament organised by Pune Municipal 
+            Corporation and the District sports council </p>
+            </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12 col-lg-3 col-md-3"  style="padding:7px;" >
+  <div class="card cont">
+    <div class="card-body" style="padding:0px;">
+        <img src="kabaddi.jpg"  class="cls  img-fluid" height="250" width="613" style="border-radius:5px;" class="image">
+        <div class="overlay">
+          <h4 class="text-left">Kabaddi</h4>
+          <p> Schools Tournaments allows School Players from all over the country to
+             participate and showcase their talent.
+          </p>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-3 col-md-3"  style="padding:7px;" >
+    <div class="card cont">
+      <div class="card-body" style="padding:0px;">
+          <img src="karate.jpg"  class="cls  img-fluid" height="250" width="613" style="border-radius:5px;" class="image">
+          <div class="overlay">
+            <h4 class="text-left">Karate</h4>
+            <p> The martial art; Karate is a part of the curriculum in Alpine Public School for the Primary students. It enhances their 
+              development in skills and principles .</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-3 col-md-3"  style="padding:7px;" >
+      <div class="card cont">
+        <div class="card-body" style="padding:0px;">
+            <img src="basketball.jpg"  class="cls  img-fluid" height="250" width="613" style="border-radius:5px;" class="image">
+            <div class="overlay">
+              <h4 class="text-left">Basketball</h4>
+              <p> Tournament hosts St Patrick’s High School
+                 had an easy win over Ganges Valley during the 16th Annual Inter-School Basketball Tournament </p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+</div>
+  <br>
+<div class="container-fluid bg-success " >
+<h4 class="text-center text-capitalize pt-2 text-light  h-50" >Celebrations</h4>
+
+<div class="row">
+<div class="col-12 col-lg-3 col-md-3"  style="padding:7px;">
+  
+  <div class="card cont">
+    <div class="card-body " style="padding:0px;">
+        <img src="diwali.jpg"  class="cls img-fluid " height="250" width="613" style="border-radius:5px;" class="image">
+        <div class="overlay">
+          <h4 class="text-left">Football</h4>
+          <p> Subrato Mukherjee Cup inter-school football tournament organised by Pune Municipal 
+            Corporation and the District sports council </p>
+            </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12 col-lg-3 col-md-3"  style="padding:7px;" >
+  <div class="card cont">
+    <div class="card-body" style="padding:0px;">
+        <img src="christmas.jpg"  class="cls  img-fluid" height="250" width="613" style="border-radius:5px;" class="image">
+        <div class="overlay">
+          <h4 class="text-left">Kabaddi</h4>
+          <p> Schools Tournaments allows School Players from all over the country to
+             participate and showcase their talent.
+          </p>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-3 col-md-3"  style="padding:7px;" >
+    <div class="card cont">
+      <div class="card-body" style="padding:0px;">
+          <img src="childrensday.jpg"  class="cls  img-fluid" height="250" width="613" style="border-radius:5px;" class="image">
+          <div class="overlay">
+            <h4 class="text-left">Karate</h4>
+            <p> The martial art; Karate is a part of the curriculum in Alpine Public School for the Primary students. It enhances their 
+              development in skills and principles .</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-3 col-md-3"  style="padding:7px;" >
+      <div class="card cont">
+        <div class="card-body" style="padding:0px;">
+            <img src="15august.jpg"  class="cls  img-fluid" height="250" width="613" style="border-radius:5px;" class="image">
+            <div class="overlay">
+              <h4 class="text-left">Basketball</h4>
+              <p> Tournament hosts St Patrick’s High School
+                 had an easy win over Ganges Valley during the 16th Annual Inter-School Basketball Tournament </p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+</div>
+  
+
+
+
+
+    
+
+
+
+<br>
+<div class="container-fluid bg-success" >
+<h4 class="text-center text-capitalize pt-2 text-light" >E-classrooms</h4>
+
+<div class="row">
+<div class="col-12 col-lg-6 col-md-6"  style="padding:7px;">
+  
+  <div class="card cont">
+    <div class="card-body " style="padding:0px;">
+        <img src="e-classroom.jpg"  class="cls img-fluid " height="250" width="613" style="border-radius:5px;" class="image">
+        <div class="overlay">
+          <h4 class="text-left">E-Class</h4>
+          <p>  where you can image that you are running your classroom online.
+             Everything is online, your students, teaching boards, content, exams, curriculum. 
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12 col-lg-6 col-md-6"  style="padding:7px;" >
+  <div class="card cont">
+    <div class="card-body" style="padding:0px;">
+        <img src="ecls.jpg"  class="cls  img-fluid" height="250" width="613" style="border-radius:5px;" class="image">
+        <div class="overlay">
+        <h4 class="text-left">E-Class</h4>
+          <p>  where you can image that you are running your classroom online.
+             Everything is online, your students, teaching boards, content, exams, curriculum. 
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+<br>
+<section>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6  col-sm-12">
+    <img src="annualday.jpg" width="" class="img-fluid">
+    </div>
+    <div class="col-lg-6 col-sm-12" style="padding:7px;">
+      <div class=" border border-success">
+        <p class="p1 text-center text-capitalize bg-success pt-4">
+          News &amp; Events
+        </p>
+        <marquee direction="up" scrollamount="3" loop="infinite">
+          <ul class="u2" style="font:bold 15px Times New Roman;color:green;height:200px">
+          <li>School will be reopened on 13th june 2019</li><br>
+          <li>Admission is starterd for Academic year 2019-2020</li><br>
+          <li>Exam is posponed for all classes</li><br>
+          <li>Tommorrow is holiday</li><br>
+          <li><b>Flag hosting celebration:</b><br>
+            On the occasion of Independence Day, 
+            Respected Principal Mr. Ferdinand Bunyan, Vice principal Mr. Graham Heiden, Mr. Eug..
+
+          </li>
+          </marquee>
+          </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</section>
+
+<a id="aff">
+<section>
+  <div class="container-fluid mb-5 mt-5 ">
+    <h1 class="text-center text-capitalize pt-5 text-success">Affliates</h1>
+    <hr class=" text-dark bg-success">
+    
+      <div class=" d-flex justify-content-lg-center d-flex justify-content-md-center d-flex justify-content-center">
+    <a href="http://www.cambridgeinternational.org/" target="_blank">
+      <img src="cambridge.jpg" ALT="cambridge-section" width="100px" height="100px"  />
+    </a>
+    <a href="http://www.ibo.org" target="_blank">
+        <img src="ibdp.jpg" ALT="ibdp"width="100px" height="100px" />
+    </a>
+    <a href="http://www.cisce.org" target="_blank">
+    <img src="cisce.jpg" ALT="cisce"width="120px" height="100px" />
+    </a>
+
+  </div>
+  </div>
+</section>
+</a>
+
+<section>
+  <div class="container-fluid bg-dark">
+    <div class="row">
+      <div class="col-12 text-center text-light">
+        <h4 class="text-center">Christ church school</h4>
+        <p style="font-size:12px;">Address:76, Warden Rd, Breach Candy, Cumballa Hill, Mumbai, Maharashtra 400026<br>
+	Contact No:346766787/46566887<br>
+	Websites:<a href="#">www.st.agnes.com</a><br>
+  Mail us:<a href="#">stagness@gmail.com</a></p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+ 
+
+
+
+
+
+
+</body>
+</html>
